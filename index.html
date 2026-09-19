@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For Aishu | A Birthday Story</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Caveat:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Audio Player -->
+  <audio id="bg-music" loop preload="auto">
+    <source src="music/Kaatrae En Vaasal BGM.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Sound Toggle Control -->
+  <button id="sound-control" class="sound-btn hidden" aria-label="Toggle Sound">
+    <span class="sound-icon">🎵</span>
+  </button>
+
+  <!-- 1. Cinematic Opening Overlay -->
+  <div id="intro-overlay" class="intro-screen">
+    <div class="intro-content">
+      <p class="intro-line line-1">Some of the best people enter our lives completely by accident.</p>
+      <p class="intro-line line-2">Mine started with a badminton racket.</p>
+      <p class="intro-line line-3 name-reveal">Aishu.</p>
+      <p class="intro-line line-4">Today is about you.</p>
+      <button id="enter-btn" class="enter-experience-btn">Begin Experience</button>
+    </div>
+  </div>
+
+  <!-- Main Website Container -->
+  <main id="main-content" class="main-wrapper">
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="vignette"></div>
+      <div class="hero-text">
+        <span class="subtitle">A Tribute To An Unexpected Friendship</span>
+        <h1>Happy Birthday, Aishu</h1>
+        <p class="hero-quote">"From a random game on a court to one of the most trusted people in my life."</p>
+      </div>
+      <a href="#badminton-story" class="scroll-down-indicator">
+        <span>Scroll to Explore</span>
+        <div class="arrow">↓</div>
+      </a>
+    </section>
+
+    <!-- 2. Badminton Story Section -->
+    <section id="badminton-story" class="story-section">
+      <div class="container">
+        <div class="story-visual">
+          <!-- Shuttlecock SVG Visual -->
+          <svg class="shuttle-icon" viewBox="0 0 64 64" width="64" height="64">
+            <path d="M32 4 L20 36 L32 48 L44 36 Z" fill="none" stroke="currentColor" stroke-width="2"/>
+            <circle cx="32" cy="52" r="6" fill="currentColor"/>
+          </svg>
+        </div>
+        <div class="story-lines">
+          <p class="story-p">One random day.</p>
+          <p class="story-p">I went to play badminton.</p>
+          <p class="story-p">I didn't know I was about to meet someone...</p>
+          <p class="story-p highlight">...who would become one of the most important people in my life.</p>
+          <p class="story-p">Funny how life works.</p>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <span class="stat-num">1</span>
+            <span class="stat-label">Random Match</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">1</span>
+            <span class="stat-label">Unforgettable Friendship</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">365+</span>
+            <span class="stat-label">Days of Trust & Support</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">∞</span>
+            <span class="stat-label">Memories Ahead</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Photo Gallery Reel -->
+    <section class="gallery-section">
+      <div class="container">
+        <h2>Beatiful pics </h2>
+        <p class="section-sub">Love yourself even if someone comes.</p>
+        
+        <div class="gallery-grid">
+          <div class="gallery-item" data-src="images/image 1.jpeg" data-caption="One of those moments that always brings a smile.">
+            <img src="images/image 1.jpeg" alt="Memory 1" loading="lazy" />
+            <div class="img-overlay"><span>View Memory</span></div>
+          </div>
+          <div class="gallery-item" data-src="images/image 2.jpeg" data-caption="Good times and genuine laughter.">
+            <img src="images/image 2.jpeg" alt="Memory 2" loading="lazy" />
+            <div class="img-overlay"><span>View Memory</span></div>
+          </div>
+          <div class="gallery-item" data-src="images/image 3.jpeg" data-caption="Through happy days and quiet conversations.">
+            <img src="images/image 3.jpeg" alt="Memory 3" loading="lazy" />
+            <div class="img-overlay"><span>View Memory</span></div>
+          </div>
+          <div class="gallery-item" data-src="images/image 4.jpeg" data-caption="Another chapter in a year of great memories.">
+            <img src="images/image 4.jpeg" alt="Memory 4" loading="lazy" />
+            <div class="img-overlay"><span>View Memory</span></div>
+          </div>
+          <div class="gallery-item" data-src="images/image 5.jpeg" data-caption="Grateful for every single moment.">
+            <img src="images/image 5.jpeg" alt="Memory 5" loading="lazy" />
+            <div class="img-overlay"><span>View Memory</span></div>
+          </div>
+          <div class="gallery-item" data-src="images/image 6.jpeg" data-caption="The best kind of friendship is the unexpected one.">
+            <img src="images/image 6.jpeg" alt="Memory 6" loading="lazy" />
+            <div class="img-overlay"><span>View Memory</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+      <span class="lightbox-close">&times;</span>
+      <img id="lightbox-img" src="" alt="Enlarged Memory" />
+      <p id="lightbox-caption" class="lightbox-caption"></p>
+    </div>
+
+    <!-- 4. Things I Admire About You -->
+    <section class="admire-section">
+      <div class="container">
+        <h2>What Makes You Special</h2>
+        <div class="admire-grid">
+          <div class="admire-card">
+            <div class="card-icon">✨</div>
+            <h3>Your Genuine Kindness</h3>
+            <p>You have a natural ability to make people around you feel comfortable and valued without even trying.</p>
+          </div>
+          <div class="admire-card">
+            <div class="card-icon">🤝</div>
+            <h3>Steadfast Loyalty</h3>
+            <p>You don't just stay around for the happy moments—you show up when things get difficult. That means everything.</p>
+          </div>
+          <div class="admire-card">
+            <div class="card-icon">🏸</div>
+            <h3>Your Energy & Humor</h3>
+            <p>Whether on the badminton court or in random conversations, your presence brightens up any room.</p>
+          </div>
+          <div class="admire-card">
+            <div class="card-icon">🔒</div>
+            <h3>Deep Trustworthiness</h3>
+            <p>In just one year, you've become someone I can trust completely without second thought.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Secret Letter Experience -->
+    <section class="letter-section">
+      <div class="container">
+        <h2>A Personal Note</h2>
+        <p class="section-sub">Tap the envelope to open.</p>
+
+        <div class="envelope-wrapper" id="envelope-trigger">
+          <div class="envelope">
+            <div class="envelope-flap"></div>
+            <div class="envelope-paper">
+              <div class="letter-content">
+                <p class="letter-salutation">Dear Aishu,</p>
+                <p>Looking back over this past year, it’s amazing how much can change because of one random day on a badminton.</p>
+                <p>You came into my life unexpectedly, but you quickly became one of the most trusted and meaningful friends I have. Thank you for being there during the difficult, quiet moments just as much as the happy, celebratory ones.</p>
+                <p>I value our friendship deeply. Thank you for being genuinely, authentically yourself.</p>
+                <p class="letter-sign">Happy Birthday,<br>Your Best Friend</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Candle Cake Interaction -->
+    <section class="cake-section">
+  <div class="container">
+    <h2>Make a Wish</h2>
+    <p class="cake-sub" id="cake-instruction">Click "Enable Mic" and blow into your microphone!</p>
+
+    <!-- Mic Control Button -->
+    <button id="enable-mic-btn" class="mic-btn">🎙️ Enable Microphone</button>
+    <div id="mic-status" class="mic-status">Microphone inactive</div>
+
+    <!-- Enhanced Realistic Cake -->
+    <div class="cake-container" id="cake-interactive">
+      <div class="plate"></div>
+      <div class="cake-layer cake-bottom"></div>
+      <div class="cake-layer cake-middle"></div>
+      <div class="cake-layer cake-top">
+        <div class="icing"></div>
+      </div>
+      <div class="candle">
+        <div class="wick"></div>
+        <div class="flame" id="flame">
+          <div class="flame-inner"></div>
+        </div>
+        <div class="smoke" id="smoke"></div>
+      </div>
+    </div>
+
+    <div id="wish-message" class="wish-message hidden">
+      <p>✨ May your day be filled with as much happiness as you bring into my life every single day. Happy Birthday to an extraordinary woman and an irreplaceable friend. ✨</p>
+    </div>
+  </div>
+</section>
+
+    <!-- 7. Final Movie-Ending Surprise -->
+    <section class="final-section">
+      <div class="container">
+        <div class="final-reveal">
+          <p class="final-line f-1">Before you leave...</p>
+          <p class="final-line f-2">I just want you to know one thing.</p>
+          <h2 class="final-line f-3">Thank you for being there.</h2>
+          <div class="final-list">
+            <p class="final-line f-4">• For the good days.</p>
+            <p class="final-line f-5">• For the difficult days.</p>
+            <p class="final-line f-6">• For every random conversation.</p>
+            <p class="final-line f-7">• For every laugh.</p>
+            <p class="final-line f-8 highlight-gold">• For becoming my best friend.</p>
+          </div>
+          <h1 class="final-title">Happy Birthday, Aishu ❤️</h1>
+
+          <button id="one-last-thing-btn" class="last-btn">One Last Thing</button>
+          
+          <div id="last-message" class="last-message-box hidden">
+            <p>In a life full of temporary things, your presence is my one absolute certainty. Wishing an incredible birthday to the person who holds my deepest trust and utmost respect.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hidden Easter Egg Trigger -->
+    <div id="secret-easter-egg" class="secret-trigger" title="???">🏸</div>
+    <div id="secret-modal" class="secret-modal hidden">
+      <div class="secret-content">
+        <h3>Okay... you found it! 🌟</h3>
+        <p>Just a small reminder that the best friendships in life are the ones you never saw coming.</p>
+        <button id="close-secret">Close</button>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
